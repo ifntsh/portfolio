@@ -1,0 +1,14 @@
+portfolio/
+├── index.html
+├── css/
+│   ├── reset.css
+│   ├── variables.css
+│   ├── animations.css
+│   ├── header.css
+│   ├── sections.css
+│   └── responsive.css
+├── js/
+│   ├── animations.js
+│   └── main.js
+└── data/
+    └── portfolio-data.js

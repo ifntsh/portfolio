@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 | Your Name</title>
+    
+    <!-- CSS 파일들 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-<h1>portfolio</h1>
-<p>준비 중입니다.</p>
+    <!-- 헤더 -->
+    <header>
+        <h1 id="name">홍길동</h1>
+        <p id="title">풀스택 개발자 | Full Stack Developer</p>
+    </header>
+
+    <div class="container">
+        <!-- 소개 섹션 -->
+        <section class="intro">
+            <p id="bio">
+                안녕하세요! 사용자 경험을 최우선으로 생각하는 개발자입니다. 
+                새로운 기술을 배우는 것을 즐기며, 문제 해결을 통해 성장하는 것을 좋아합니다.
+            </p>
+        </section>
+
+        <!-- 스킬 섹션 -->
+        <section>
+            <h2>💡 Skills</h2>
+            <div class="skills" id="skills-container"></div>
+        </section>
+
+        <!-- 프로젝트 섹션 -->
+        <section>
+            <h2>🚀 Projects</h2>
+            <div class="projects" id="projects-container"></div>
+        </section>
+
+        <!-- 연락처 섹션 -->
+        <section class="contact">
+            <h2>📫 Contact</h2>
+            <div class="contact-links" id="contact-links"></div>
+        </section>
+    </div>
+
+    <!-- 푸터 -->
+    <footer>
+        <p>&copy; 2025 <span id="footer-name">Your Name</span>. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript 파일들 -->
+    <script src="data/portfolio-data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>
