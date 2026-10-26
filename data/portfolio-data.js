@@ -1,31 +1,34 @@
 const portfolioData = {
-    // 기본 정보
-    name: "Sohyun Park",
-    title: "Data Engineering & Database Technology",
-    bio: "데이터 기반 시스템을 안정적으로 설계하고 운영하는 것에 관심이 많습니다. DW 전환, SQL 최적화, 데이터 파이프라인 구축을 수행하며, 향후 데이터 플랫폼 및 DBA 영역까지 전문성을 확장해 나가고자 합니다.",
-    
-    // 스킬
-    skills: [
+  // 기본 정보
+  name: "Sohyun Park",
+  title: "Data Engineer | Data Pipeline & Cloud DW",
+  bio: "8년 차 데이터 엔지니어로, 백엔드 개발 경험을 바탕으로 GCP·AWS 환경에서 대규모 데이터 파이프라인을 설계, 구축, 운영해 왔습니다. 배치 자동화와 모니터링 체계로 운영 안정성과 처리 효율을 높이는 일에 강점이 있습니다.",
+
+  // 스킬
+  skills: [
     // Database & Data Engineering
     "DW Pipeline",
     "ETL",
     "Airflow",
+    "Spark (Scala)",
+    "Kafka",
+    "Apache Iceberg",
+    "Trino",
     "Google BigQuery",
     "Oracle",
+    "PostgreSQL",
     "MySQL",
     "MongoDB",
     "SQL Tuning",
-    // "Database Schema Design",
     "Google Cloud Composer",
-
+    "Tableau",
     // Programming & Backend
     "Python",
+    "Scala",
     "Java",
     "Spring Boot",
     "Node.js",
     "PL/SQL",
-    // "Pro*C",
-
     // Cloud & Infra
     "GCP",
     "AWS",
@@ -33,79 +36,70 @@ const portfolioData = {
     "Docker",
     "Kubernetes",
     "CI/CD (Jenkins)",
-
     // Monitoring & Ops
-    // "GCP Monitoring",
-    // "Zabbix",
-    "Log Analysis",
-    // "Slack API Notification",
-
+    "Zabbix",
+    "GCP Monitoring",
+    "Slack API Notification",
     // Collaboration & Others
     "Git",
-    // "ERD & Data Modeling",
-    // "Batch Scheduling & 운영"
-    ],
+  ],
 
-    
-    // 프로젝트
-    projects: [
-        {
-            title: "현대카드 DW 파이프라인 구축 (Oracle → BigQuery 전환)",
-            date: "2025.10 ~ 2026.04",
-            description: "Oracle 기반 DW 자산을 BigQuery 플랫폼으로 전환하는 프로젝트에서 데이터 엔지니어로 참여하였습니다. 기존 PL/SQL · Pro*C 기반 처리 로직을 분석하여 ANSI SQL 및 BigQuery에 적합한 구조로 재작성하였으며, DW 파이프라인 구조 재정립, 배치 스케줄링 설계, 예외 처리 표준화 등을 수행하였습니다.",
-            techStack: [
-                "BigQuery", "Oracle", "SQL Tuning", "DW Pipeline", "PL/SQL", "Pro*C"
-            ]
-        },
-        {
-            title: "삼성전자 Cloud Service 운영 · 데이터 품질 모니터링 및 튜닝",
-            date: "2024.01 ~ 2025.10",
-            description: "클라우드 환경에서 DB 운영과 데이터 품질 모니터링을 담당하였습니다. 쿼리 튜닝을 통해 SQL 실행 효율을 개선하고, Airflow 기반 품질 점검 및 이상 탐지 DAG를 설계하여 운영 안정성과 무결성을 확보하였습니다. 또한 기존에 운영 환경만 존재하던 Airflow 구성에 개발 환경을 신규로 구축하여 DAG 개발 및 사전 검증 체계를 수립하였으며, 로그 분석을 기반으로 장애 대응 자동화 환경을 마련하였습니다.",
-            techStack: [
-                "BigQuery", "Airflow", "Python", "Composer", "GCP Monitoring"
-            ]
-        },
-        {
-            title: "클라우드 관리 플랫폼(CMP) 구축 및 DB 설계/운영 자동화",
-            date: "2023.02 ~ 2023.08",
-            description: "신규 MSA 기반 CMP 개발 프로젝트에서 DB 담당자로 초기 설계부터 투입되었습니다. 서비스 요건 기반 스키마 설계 및 인덱스 전략을 수립하고, Terraform 기반으로 DB 인프라 구축 및 배포를 자동화하였습니다. Spring Boot API와의 연동을 고려한 SQL 설계, 성능 점검 및 운영 문서화를 수행하였습니다.",
-            techStack: [
-                "Terraform", "Spring Boot", "AWS", "Docker", "Kubernetes", "Node.js", "Vue3", "MySQL"
-            ]
-        },
-        {
-            title: "백엔드 및 데이터 기반 서비스 개발",
-            date: "2019.02 ~ 2022.06",
-            description: "데이터 검증을 포함한 신규 서비스 데이터 처리 로직을 구축하고, 스키마 설계 및 프로시저 개발을 수행하였습니다. 데이터 수집 자동화 및 클라우드 운영 경험을 통해 데이터 정합성과 운영 효율을 개선하였습니다.",
-            techStack: [
-                "Java", "Spring Boot", "Node.js", "Python", "MySQL", 
-                "MongoDB", "AWS", "Jenkins", "Zabbix", "Linux", "Git"
-            ]
-        }
-    ],
-    
-    // 연락처
-    contacts: [
-        {
-            icon: "📧",
-            text: "Email",
-            email: "bizifntsh@gmail.com",
-            type: "email"
-        },
-        {
-            icon: "💻",
-            text: "GitHub",
-            url: "https://github.com/ifntsh"
-        },
-        // {
-        //     icon: "💼",
-        //     text: "LinkedIn",
-        //     url: "https://linkedin.com/in/yourusername"
-        // },
-        {
-            icon: "✍️",
-            text: "Blog",
-            url: "https://shpp.tistory.com/"
-        }
-    ]
+  // 프로젝트
+  projects: [
+    {
+      title: "국내 대형 유통사 데이터 파이프라인 구축 및 고도화 (AWS · Iceberg)",
+      date: "2026.04 ~ 2026.12",
+      description: "협력사 내 유일한 데이터 엔지니어로서 DBA 4인과 협업하며 파이프라인 운영과 배치 자동화 체계를 전담했습니다. Jar 스크립트 기반 배치 전체를 Airflow로 전환하고 DAG 개발부터 운영, 장애 대응까지 단독 수행했으며, 콜백 기반 모니터링 플러그인으로 배치 실패 시 SMS 알림 체계를 구축했습니다. Jenkins 기반 브랜치 Merge 자동배포 체계로 전환하고, Kafka 기반 행동로그 Spark 집계 로직을 리팩토링했으며, Oracle DW의 Iceberg 전환에 따른 분석 테이블 약 60개를 설계했습니다.",
+      techStack: ["AWS", "Kafka", "Spark (Scala)", "Airflow", "Jenkins", "Iceberg", "Trino", "Oracle", "PostgreSQL", "Tableau"],
+    },
+    {
+      title: "국내 카드사 DW 파이프라인 구축 (Oracle → BigQuery 전환)",
+      date: "2025.10 ~ 2026.04",
+      description: "Oracle ADW 기반 DW를 BigQuery 기반 DW/DM으로 전환하는 금융 데이터 마이그레이션에서 Pro*C 배치 SQL 818개와 프로시저 19개를 BigQuery ETL 파이프라인으로 전환했습니다. 파티션/클러스터링 전략으로 스캔량과 비용을 줄이고, STEP 단위 실행과 건수 비교 기반의 정합성 검증(Reconciliation) 체계를 수립했습니다.",
+      techStack: ["BigQuery", "Oracle Exadata", "Pro*C", "PL/SQL", "Python", "GCP", "Airflow"],
+    },
+    {
+      title: "국내 전자 제조사 Cloud Service 운영 · 데이터 품질 모니터링 및 튜닝",
+      date: "2024.01 ~ 2025.10",
+      description: "DAG 20개, 태스크 그룹 400개 이상, 슬롯 3,000개 규모의 BigQuery 배치 파이프라인을 운영하며 Airflow 기반 데이터 품질 이상 탐지 DAG와 Slack 알림 체계를 구축했습니다. 주간 배치의 UNNEST 데이터 폭발(3,100억 건)과 디스크 스필 75TB 병목을 발견하고 사전 필터링 구조 재설계안을 제안하여 디스크 스필 0, 슬롯 사용량 50% 절감 효과를 도출했습니다.",
+      techStack: ["BigQuery", "SQL", "Python", "Airflow", "GCP Monitoring", "Slack API"],
+    },
+    {
+      title: "클라우드 관리 플랫폼(CMP) 구축 및 DB 설계/운영 자동화",
+      date: "2023.02 ~ 2023.08",
+      description: "MSA 기반 클라우드 관리 플랫폼 신규 구축에서 MySQL 스키마와 인덱스 설계, Terraform 기반 DB 인프라 IaC, Spring Boot 백엔드 API와 Vue3 화면 개발, Docker/Kubernetes 배포 파이프라인 구축을 수행했습니다.",
+      techStack: ["MySQL", "Terraform", "Spring Boot", "Vue3", "AWS", "GCP", "Docker", "Kubernetes"],
+    },
+    {
+      title: "백엔드 및 데이터 기반 서비스 개발",
+      date: "2019.02 ~ 2022.06",
+      description: "서비스 약 20개 규모, 일 1억 건 이상 수집 시스템을 운영하며 개인 담당 서비스 5개를 맡았습니다. Node.js 기반 신규 수집 시스템을 구축하고 MySQL 전체 데이터를 MongoDB로 마이그레이션했으며, Jenkins CI/CD와 Zabbix 텔레그램 연동 장애 알림 체계를 구축했습니다.",
+      techStack: ["MySQL", "MongoDB", "Java", "Python", "Node.js", "Jenkins", "Zabbix", "AWS"],
+    },
+  ],
+
+  // 연락처
+  contacts: [
+    {
+      icon: "\u{1F4E7}",
+      text: "Email",
+      email: "bizifntsh@gmail.com",
+      type: "email",
+    },
+    {
+      icon: "\u{1F4BB}",
+      text: "GitHub",
+      url: "https://github.com/ifntsh",
+    },
+    // {
+    //   icon: "\u{1F4BC}",
+    //   text: "LinkedIn",
+    //   url: "https://www.linkedin.com/in/your-id",
+    // },
+    {
+      icon: "\u270D\uFE0F",
+      text: "Blog",
+      url: "https://shpp.tistory.com/",
+    },
+  ],
 };
