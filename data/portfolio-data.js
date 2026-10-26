@@ -49,7 +49,7 @@ const portfolioData = {
     {
       title: "국내 대형 유통사 데이터 파이프라인 구축 및 고도화 (AWS · Iceberg)",
       date: "2026.04 ~ 2026.12",
-      description: "협력사 내 유일한 데이터 엔지니어로서 DBA 4인과 협업하며 파이프라인 운영과 배치 자동화 체계를 전담했습니다. Jar 스크립트 기반 배치 전체를 Airflow로 전환하고 DAG 개발부터 운영, 장애 대응까지 단독 수행했으며, 콜백 기반 모니터링 플러그인으로 배치 실패 시 SMS 알림 체계를 구축했습니다. Jenkins 기반 브랜치 Merge 자동배포 체계로 전환하고, Kafka 기반 행동로그 Spark 집계 로직을 리팩토링했으며, Oracle DW의 Iceberg 전환에 따른 분석 테이블 약 60개를 설계했습니다.",
+      description: "Jar 스크립트 기반 배치 전체를 Airflow로 전환하고 DAG 개발부터 운영, 장애 대응까지 단독 수행했으며, 콜백 기반 모니터링 플러그인으로 배치 실패 시 SMS 알림 체계를 구축했습니다. Jenkins 기반 브랜치 Merge 자동배포 체계로 전환하고, Kafka 기반 행동로그 Spark 집계 로직을 리팩토링했습니다.",
       techStack: ["AWS", "Kafka", "Spark (Scala)", "Airflow", "Jenkins", "Iceberg", "Trino", "Oracle", "PostgreSQL", "Tableau"],
     },
     {
@@ -86,20 +86,43 @@ const portfolioData = {
       email: "bizifntsh@gmail.com",
       type: "email",
     },
-    {
-      icon: "\u{1F4BB}",
-      text: "GitHub",
-      url: "https://github.com/ifntsh",
-    },
+    // {
+    //   icon: "\u{1F4BB}",
+    //   text: "GitHub",
+    //   url: "https://github.com/ifntsh",
+    //   plain: true,
+    // },
     // {
     //   icon: "\u{1F4BC}",
     //   text: "LinkedIn",
     //   url: "https://www.linkedin.com/in/your-id",
     // },
-    {
-      icon: "\u270D\uFE0F",
-      text: "Blog",
-      url: "https://shpp.tistory.com/",
-    },
+    // {
+    //   icon: "\u270D\uFE0F",
+    //   text: "Blog",
+    //   url: "https://shpp.tistory.com/",
+    //   plain: true,
+    // },
   ],
 };
+
+// 연락처 중 plain: true 항목은 링크(a) 대신 span으로 표시
+(function () {
+  const plainUrls = portfolioData.contacts
+    .filter((c) => c.plain && c.url)
+    .map((c) => new URL(c.url).href);
+
+  function convert(root) {
+    root.querySelectorAll("a[href]").forEach((a) => {
+      if (!plainUrls.includes(a.href)) return;
+      const span = document.createElement("span");
+      span.className = a.className;
+      while (a.firstChild) span.appendChild(a.firstChild);
+      a.replaceWith(span);
+    });
+  }
+
+  const observer = new MutationObserver(() => convert(document));
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+  document.addEventListener("DOMContentLoaded", () => convert(document));
+})();
